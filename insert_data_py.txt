@@ -1,0 +1,81 @@
+import serial
+import time
+import pymysql
+import threading
+import os
+
+from flask import Flask, render_template, request, redirect
+
+ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+time.sleep(2)
+
+db = pymysql.connect(
+    host="localhost",
+    user="pi",
+    password="",
+    db="pot_db"
+)
+
+cursor = db.cursor()
+
+app = Flask(__name__)
+
+temperature_threshold = 24.0
+lightMax_threshold = 200
+lightMin_threshold = 10
+
+print("Storing Arduino data in DB")
+
+def read_Arduino():
+    global temperature_threshold, lightMax_threshold, lightMin_threshold
+
+    while True:
+        try:
+            line = ser.readline().decode('utf-8').strip()
+            if line and "Temp:" in line:
+                print("Received:", line)
+
+                parts = line.replace("Temp:", "").replace("Light:", "").split("|")
+                temperature = float(parts[0].strip())
+                light = int(parts[1].strip())
+
+                cursor.execute(
+                    "INSERT INTO potlog (temperature, light) VALUES (%s, %s)",
+                    (temperature, light)
+                )
+                db.commit()
+
+                command = f"{temperature_threshold}, {lightMin_threshold}, {lightMax_threshold}\n"
+                ser.write(command.encode())
+
+        except Exception as e:
+            print("Inserting error:", e)
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    global temperature_threshold, lightMax_threshold, lightMin_threshold
+
+    if request.method == 'POST':
+        temperature_threshold = float(request.form['temp'])
+        lightMax_threshold = int(request.form['light_max'])
+        lightMin_threshold = int(request.form['light_min'])
+
+        print(f"Updated threshold: Temp= {temperature_threshold}, Light Min={lightMin_threshold}, Light Max={lightMax_threshold}")
+        return redirect('/')
+
+    cursor.execute("SELECT temperature, light FROM potlog ORDER BY id DESC LIMIT 1")
+    latest = cursor.fetchone()
+
+    cursor.execute("SELECT MAX(temperature), MIN(temperature), MAX(light), MIN(light) FROM potlog")
+    summary = cursor.fetchone()
+
+    return render_template("index.html",
+                           latest=latest,
+                           summary=summary,
+                           temp=temperature_threshold,
+                           light_min=lightMin_threshold,
+                           light_max=lightMax_threshold)
+
+if __name__ == '__main__':
+    threading.Thread(target=read_Arduino, daemon=True).start()
+    app.run(host='0.0.0.0', port=5000)

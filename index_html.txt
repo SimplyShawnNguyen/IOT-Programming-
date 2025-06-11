@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> IOT pratical assignment</title>
+</head>
+<body>
+  <h1>
+    Live Sensors Dashboard
+  </h1>
+
+  {% if latest %}
+    <h3>Current readings of sensors</h3>
+    <p>Temperature: <strong>{{ latest[0] }} c</strong></p>
+    <p>Light: <strong>{{ latest[1] }}</strong></p>
+  {% else %}
+    <p>No data</p>
+  {% endif %}
+
+  <h3>Threshold for sensors</h3>
+  <form method = "POST">
+    <label>Temperature Threshold:</label>
+    <input type="number" step="0.1" name="temp" value="{{ temp }}"><br><br>
+
+    <label>Light Minimum Threshold (C):</label>
+    <input type="number" name="light_min" value="{{ light_min }}"><br><br>
+
+    <label>Light Maximum Threshold (C):</label>
+    <input type="number" name="light_max" value="{{ light_max }}"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>Database Summary:</h3>
+  <table border ="1" cellpadding="5">
+    <tr>
+      <th>Max temp</th><th>Min temp</th><th>Max Light</th><th>Min Light</th>
+    </tr>
+    <tr>
+      <td>{{summary[0]}}</td>
+      <td>{{summary[1]}}</td>
+      <td>{{summary[2]}}</td>
+      <td>{{summary[3]}}</td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.14">
+  <diagram name="Page-1" id="Q-YkDZ6-7fJ2VUY5rFQ0">
+    <mxGraphModel dx="2239" dy="1849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9X45Gt24FHBRgwef6nvA-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-13" target="9X45Gt24FHBRgwef6nvA-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-13" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="308.76" y="-120" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-14" target="9X45Gt24FHBRgwef6nvA-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-14" value="Read Soil Moisture and Light data from sensors" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310.32" y="-30" width="171.87" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-16" target="9X45Gt24FHBRgwef6nvA-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-16" value="Send sensor data to Arduino&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Read%20Soil%20Moisture%20and%20Light%20data%20from%20sensors%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22311.25%22%20y%3D%22120%22%20width%3D%22162.5%22%20height%3D%2280%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="309.06" y="100" width="171.87" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-17" target="9X45Gt24FHBRgwef6nvA-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-17" value="Arduino process the data and the send the data to Raspberry Pi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="308.13" y="240" width="171.87" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-18" target="9X45Gt24FHBRgwef6nvA-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-18" value="Raspberry Pi then store the sensor data in the MariaDB database" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="308.13" y="390" width="171.87" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-19" target="9X45Gt24FHBRgwef6nvA-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-19" target="9X45Gt24FHBRgwef6nvA-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-19" target="9X45Gt24FHBRgwef6nvA-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-19" value="Run edge analytics" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="308.13" y="500" width="171.87" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-20" target="9X45Gt24FHBRgwef6nvA-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-41" value="&amp;gt; threshold" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9X45Gt24FHBRgwef6nvA-29">
+          <mxGeometry x="0.2053" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-20" target="9X45Gt24FHBRgwef6nvA-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-42" value="&amp;lt;threshold" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9X45Gt24FHBRgwef6nvA-30">
+          <mxGeometry x="-0.1686" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-20" value="Light sensor for Shading" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="640" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-21" target="9X45Gt24FHBRgwef6nvA-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-45" value="&amp;gt;threshold" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9X45Gt24FHBRgwef6nvA-39">
+          <mxGeometry x="-0.136" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-21" target="9X45Gt24FHBRgwef6nvA-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-46" value="&amp;lt;threshold" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9X45Gt24FHBRgwef6nvA-40">
+          <mxGeometry x="-0.0373" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-21" value="Moisture&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="640" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-22" target="9X45Gt24FHBRgwef6nvA-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-43" value="&amp;gt;threshold" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9X45Gt24FHBRgwef6nvA-37">
+          <mxGeometry x="0.0521" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-22" target="9X45Gt24FHBRgwef6nvA-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-44" value="&amp;lt;threshold" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9X45Gt24FHBRgwef6nvA-38">
+          <mxGeometry x="-0.0919" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-22" value="Light sensor for&amp;nbsp;&lt;div&gt;LED grow light&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="329.07" y="640" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-23" target="9X45Gt24FHBRgwef6nvA-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-23" value="Turning ON the shading component command is sent to the Arduino Uno" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-190" y="760" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-24" target="9X45Gt24FHBRgwef6nvA-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-24" value="Turning OFF the shading component command is sent to the Arduino Uno" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="760" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-25" target="9X45Gt24FHBRgwef6nvA-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-25" value="Turning OFF the LED grow light command is sent to the Arduino Uno" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="760" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-26" target="9X45Gt24FHBRgwef6nvA-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-26" value="Turning ON the LED grow light command is sent to the Arduino Uno" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="459.07" y="760" width="130.93" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-27" target="9X45Gt24FHBRgwef6nvA-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-27" value="Turning OFF the water pump command is sent to the Arduino Uno" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="760" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-28" target="9X45Gt24FHBRgwef6nvA-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-28" value="Turning ON the water pump command is sent to the Arduino Uno" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="760" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-47" target="9X45Gt24FHBRgwef6nvA-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-47" value="Based on the current command, the Arduino will activate the Shading component or not" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="930" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-48" target="9X45Gt24FHBRgwef6nvA-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-48" value="Based on the current command, the Arduino will activate the LED growl light or not" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="314.07" y="930" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-49" target="9X45Gt24FHBRgwef6nvA-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-49" value="Based on the current command, the Arduino will activate the water pump or not" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="815" y="930" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-57" target="9X45Gt24FHBRgwef6nvA-62">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="394.07000000000016" y="1330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-57" value="User will interact with the website and make changes for the threshold if needed or manually turn on or off the system component" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310.32" y="1170" width="167.5" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-62" target="9X45Gt24FHBRgwef6nvA-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-300" y="1350" />
+              <mxPoint x="-300" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9X45Gt24FHBRgwef6nvA-62" target="9X45Gt24FHBRgwef6nvA-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-62" value="Update the threshold base on the user input" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1300" width="175.93" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9X45Gt24FHBRgwef6nvA-71" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="317.2" y="1450" width="153.74" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
